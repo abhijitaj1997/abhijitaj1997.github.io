@@ -17,13 +17,14 @@
             align-items: center;
         }
 
-        /* This puts image + text side by side */
+        /* This puts image + text stacked on top of each other */
         .profile {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
         }
-
+        
         img {
             width: 400px;   /* 👈 make image bigger here */
             height: 400px;
