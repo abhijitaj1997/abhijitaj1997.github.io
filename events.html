@@ -7,12 +7,10 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-
             background-color: black;
-            color: white
+            color: white;
         }
 
-        /* This centers everything on the page */
         .container {
             height: 100vh;
             display: flex;
@@ -20,32 +18,14 @@
             align-items: center;
         }
 
-        /* This puts image + text stacked on top of each other */
         .profile {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
         }
-        
-        img {
-            width: 400px;   /* 👈 make image bigger here */
-            height: 400px;
-            border-radius: 50%;
-            object-fit: cover;
-            
-            border: 2px solid white
-        }
 
-        h1 {
-            font-size: 32px;
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+        h1 { font-size: 32px; margin: 0; }
 
         .bio {
             max-width: 600px;
@@ -53,77 +33,82 @@
             text-align: center;
             font-size: 18px;
             line-height: 1.6;
-
-            white-space: nowrap; /* 👈 forces things to be in a single line DO NOT USE IN OTHER PAGES IF NOT NECESSARY*/
-            
-            /*font-size: 18px;
-            text-align: center;
-            max-width: 600px;
-            margin: 0;*/
         }
 
-        a {
-            color: #4da6ff;
-        }
+        a { color: #4da6ff; }
 
-        /* container */
-        .menu-container {
-            position: relative;
-        }
-        
-        /* hamburger icon */
-        .menu-icon {
-            font-size: 50px;
-            cursor: pointer;
+        /* --- NAVIGATION LOGIC --- */
+
+        /* The nav-area acts as the "hover zone" */
+        .nav-area {
             position: fixed;
-            top: 15px;
-            left: 20px;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 80px; /* Small area to trigger the hover */
             z-index: 1000;
         }
 
-        /* sidebar hidden by default */
+        /* This expands the hover zone when open so the sidebar stays open */
+        .nav-area:hover {
+            width: 200px; 
+        }
+
+        /* Hamburger icon container */
+        .menu-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            z-index: 1001;
+        }
+
+        /* DRAWING THE HAMBURGER BARS */
+        .menu-icon div {
+            width: 35px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            border-radius: 2px;
+        }
+
+        /* Sidebar hidden to the left */
         .sidebar {
             position: fixed;
             top: 0;
-            left: -200px;
+            left: -200px; /* Fully hidden */
             width: 180px;
             height: 100vh;
             background-color: #222;
             padding-top: 60px;
-        
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
+            z-index: 1000;
         }
-        
-        /* links */
+
         .sidebar a {
             display: block;
             color: white;
             text-decoration: none;
             padding: 15px;
+            font-size: 18px;
         }
-        
+
         .sidebar a:hover {
             background-color: #444;
         }
+
+        /* HOVER INTERACTIONS */
         
-        /* show sidebar on hover */
-        .nav-area:hover .sidebar,
-        .sidebar:hover {
+        /* 1. When hovering over nav-area, slide the sidebar in */
+        .nav-area:hover .sidebar {
             left: 0;
         }
 
+        /* 2. When hovering over nav-area, hide the hamburger */
         .nav-area:hover .menu-icon {
             opacity: 0;
-            pointer-events: none;
-        }
-
-        /* Add this to your CSS */
-        .menu-icon div {
-            width: 35px;
-            height: 5px;
-            background-color: white; /* Give the lines color */
-            margin: 6px 0;           /* Space the lines apart */
-            transition: 0.4s;        /* Smooth look */
+            pointer-events: none; /* Prevents the icon from blocking clicks */
         }
                
     </style>
@@ -132,20 +117,20 @@
 <body>
 
     <div class="nav-area">
-
+        <!-- The Hamburger Symbol -->
         <div class="menu-icon">
             <div></div>
             <div></div>
             <div></div>
         </div>
     
+        <!-- The Sidebar -->
         <div class="sidebar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="resume.pdf">CV</a>
         </div>
-    
     </div>
     
     <div class="container">
