@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abhijit A J | Mathematics</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            background-color: black;
+            color: white
+        }
+
+        /* This centers everything on the page */
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* This puts image + text stacked on top of each other */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        img {
+            width: 400px;   /* 👈 make image bigger here */
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            
+            border: 2px solid white
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+
+            white-space: nowrap; /* 👈 forces things to be in a single line DO NOT USE IN OTHER PAGES IF NOT NECESSARY*/
+            
+            /*font-size: 18px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0;*/
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+        
+            width: 200px;
+            height: 100vh;
+        
+            background-color: #222;
+        
+            padding-top: 30px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+        
+            padding: 15px 20px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #444;
+        }
+        
+        .content {
+            margin-left: 220px;
+            padding: 30px;
+        }
+
+        a {
+            color: #4da6ff;
+        }
+
+        /* container */
+        .menu-container {
+            position: relative;
+        }
+        
+        /* hamburger icon */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        /* sidebar hidden by default */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -200px; /* hidden off-screen */
+            width: 180px;
+            height: 100vh;
+            background-color: #222;
+            padding-top: 60px;
+        
+            transition: 0.3s;
+        }
+        
+        /* links */
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #444;
+        }
+        
+        /* SHOW sidebar when hovering menu area */
+        .menu-container:hover .sidebar {
+            left: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+<div class="menu-container">
+    
+    <!-- hamburger icon -->
+    <div class="menu-icon">☰</div>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <a href="home.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="events.html">Events</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="mathematics.html">Mathematics</a>
+    </div>
+    
+</div>
+    
+<div class="container">
+    <div class="profile">
+        <h1>Miscellaneous</h1>
+        <p class="bio">
+          Here is a link to my CV: <a href="CurriculumVitae.pdf">Link</a> (Last update: June, 2023)
+        </p>
+
+      <p>Beyond mathematics, I am an avid boulderer. You can check out my <a href="https://www.instagram.com/the_monkeyman_/">instagram account</a> dedicated to climbing videos. 
+        If we ever meet at a conference, a workshop, or on some other ocassion, do let me know if you would like to go climbing together - I enjoy exploring the bouldering gyms in the cities I visit.</p>
+
+      <p>Currently reading: <b>The Horse, the Wheel, and Language</b>, by David W. Anthony</p>
+    </div>
+</div>
+    
+</body>
+</html>
