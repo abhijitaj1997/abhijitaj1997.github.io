@@ -95,18 +95,70 @@
         a {
             color: #4da6ff;
         }
+
+        /* container */
+        .menu-container {
+            position: relative;
+        }
+        
+        /* hamburger icon */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        /* sidebar hidden by default */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -200px; /* hidden off-screen */
+            width: 180px;
+            height: 100vh;
+            background-color: #222;
+            padding-top: 60px;
+        
+            transition: 0.3s;
+        }
+        
+        /* links */
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #444;
+        }
+        
+        /* SHOW sidebar when hovering menu area */
+        .menu-container:hover .sidebar {
+            left: 0;
+        }
         
     </style>
 </head>
 
 <body>
 
-<div class="sidebar">
-    <a href="home.html">Home</a>
-    <a href="contact.html">Contact</a>
-    <a href="events.html">Events</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="mathematics.html">Mathematics</a>
+<div class="menu-container">
+    
+    <!-- hamburger icon -->
+    <div class="menu-icon">☰</div>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <a href="home.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="events.html">Events</a>
+        <a href="teaching.html">Teaching</a>
+    </div>
+    
 </div>
     
 <div class="container">
