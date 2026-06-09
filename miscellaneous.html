@@ -141,19 +141,33 @@
 
         #instagram {
             text-align: center;
-            margin: 3rem auto;
+            margin: 60px auto;
         }
         
-        #instagram blockquote {
-            margin: 0 auto !important;
+        /* layout row */
+        .ig-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-
-        .ig-dark-wrapper {
-            background: #111;
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 550px;
-            margin: 0 auto;
+        
+        /* dark “card” wrapper */
+        .ig-item {
+            background: #111;              /* dark background */
+            border: 1px solid #333;        /* 👈 black/dark border */
+            padding: 15px;
+            border-radius: 14px;
+        
+            max-width: 540px;
+            flex: 1;
+        
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.04);
+        }
+        
+        /* center embed */
+        .ig-item blockquote {
+            margin: 0 auto !important;
         }
     </style>
 </head>
@@ -187,15 +201,30 @@
         If we ever meet at a conference, a workshop, or on some other ocassion, do let me know if you would like to go bouldering together - I enjoy exploring bouldering gyms in the cities I visit.</p>
 
      <section id="instagram">
-     <h2>Selected Reel</h2>
+            <h2>Selected Reels</h2>
+        
+            <div class="ig-row">
 
-     <div class="ig-dark-wrapper">
-        <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/DQnK52ViD_S/"
-            data-instgrm-version="14">
-        </blockquote>
-     </div>
-     </section>
+                /*Reel 1*/
+                <div class="ig-item">
+                    <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/reel/DQnK52ViD_S/"
+                        data-instgrm-version="14">
+                    </blockquote>
+                </div>
+
+                /*Reel 2*/
+                <div class="ig-item">
+                    <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/reel/DN_eIxriJq1/"
+                        data-instgrm-version="14">
+                    </blockquote>
+                </div>
+        
+            </div>
+        </section>
+
+<script async src="https://www.instagram.com/embed.js"></script>
         
       <p>Currently reading: <b>The Horse, the Wheel, and Language</b>, by David W. Anthony</p>
     </div>
