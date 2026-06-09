@@ -62,36 +62,6 @@
             margin: 0;*/
         }
 
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-        
-            width: 200px;
-            height: 100vh;
-        
-            background-color: #222;
-        
-            padding-top: 30px;
-        }
-        
-        .sidebar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-        
-            padding: 15px 20px;
-        }
-        
-        .sidebar a:hover {
-            background-color: #444;
-        }
-        
-        .content {
-            margin-left: 220px;
-            padding: 30px;
-        }
-
         a {
             color: #4da6ff;
         }
@@ -110,12 +80,12 @@
             left: 20px;
             z-index: 1000;
         }
-        
+
         /* sidebar hidden by default */
         .sidebar {
             position: fixed;
             top: 0;
-            left: -200px; /* hidden off-screen */
+            left: -200px;
             width: 180px;
             height: 100vh;
             background-color: #222;
@@ -136,41 +106,64 @@
             background-color: #444;
         }
         
-        /* SHOW sidebar when hovering menu area */
-        .menu-container:hover .sidebar {
+        /* show sidebar on hover */
+        .nav-area:hover .sidebar {
             left: 0;
         }
-        
+
+        .nav-area:hover .menu-icon {
+            opacity: 0;
+            pointer-events: none;
+        }
+               
     </style>
 </head>
 
 <body>
-<div class="menu-container">
-    
-    <!-- hamburger icon -->
-    <div class="menu-icon">☰</div>
 
-    <!-- sidebar -->
-    <div class="sidebar">
-        <a href="home.html">Home</a>
-        <a href="contact.html">Contact</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="mathematics.html">Mathematics</a>
-        <a href="miscellaneous.html">Miscellaneous</a>
+    <div class="nav-area">
+
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.pdf">CV</a>
+        </div>
+    
     </div>
     
-</div>
+    <div class="menu-container">
     
-<div class="container">
-    <div class="profile">
-        <h1>Events organised</h1>
-        <p class="bio">
-          <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/kleine-ag#c923117">Klei­ne AG - Ca­no­ni­cal mo­dels of Shi­mu­ra va­ri­e­ties</a> (29th March, 2025)<br>
-          <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/entr25">Early Number Theory Researchers Workshop 2025</a> (27th to 29th August, 2025)          
-        </p>
+        <!-- hamburger icon -->
+        <div class="menu-icon">☰</div>
 
+        <!-- sidebar -->
+        <div class="sidebar">
+            <a href="home.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="mathematics.html">Mathematics</a>
+            <a href="miscellaneous.html">Miscellaneous</a>
+        </div>
+        
     </div>
-</div>
+    
+    <div class="container">
+        <div class="profile">
+            <h1>Events organised</h1>
+            <p class="bio">
+              <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/kleine-ag#c923117">Klei­ne AG - Ca­no­ni­cal mo­dels of Shi­mu­ra va­ri­e­ties</a> (29th March, 2025)<br>
+              <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/entr25">Early Number Theory Researchers Workshop 2025</a> (27th to 29th August, 2025)          
+            </p>
+    
+        </div>
+    </div>
     
 </body>
 </html>
