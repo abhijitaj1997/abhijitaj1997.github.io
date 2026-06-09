@@ -2,14 +2,54 @@
 <html>
 <head>
     <title>Abhijit A J</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* This centers everything on the page */
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* This puts image + text side by side */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        img {
+            width: 200px;   /* 👈 make image bigger here */
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello, I'm Abhijit!</h1>
 
-    <img src="photo.jpg" alt="My photo" width="200">
+<div class="container">
+    <div class="profile">
+
+        <img src="photo.jpg" alt="My Photo">
+
+        <h1>Hi! I'm Abhijit A J</h1>
+
+    </div>
+</div>
+<p> Incomplete </p>
     
-    <p>This is supposed to one day become my website.</p>
-
-    <p>Unsurprising it is currently empty.</p>
 </body>
 </html>
