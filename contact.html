@@ -59,21 +59,55 @@
             max-width: 600px;
             margin: 0;*/
         }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+        
+            width: 200px;
+            height: 100vh;
+        
+            background-color: #222;
+        
+            padding-top: 30px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+        
+            padding: 15px 20px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #444;
+        }
+        
+        .content {
+            margin-left: 220px;
+            padding: 30px;
+        }
         
     </style>
 </head>
 
 <body>
-    
-<div class="content">
-    <h1>Hi! I'm Abhijit A J</h1>
+
+<div class="sidebar">
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
 </div>
     
 <div class="container">
     <div class="profile">
         <h1>Contact Information</h1>
         <p class="bio">
-            Email address: abhiaj@math.uni-paderborn.de
+            Email address: abhiaj@math.uni-paderborn.de <br>
+            Office number: J2.305 <br>
+            Office telephone number: +49 5251 60-4606 <br>
+            To view the webpage of my working group <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie">click here</a>
         </p>
 
     </div>
