@@ -59,31 +59,6 @@
             max-width: 600px;
             margin: 0;*/
         }
-
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-        
-            width: 200px;
-            height: 100vh;
-        
-            background-color: #222;
-        
-            padding-top: 30px;
-        }
-        
-        .sidebar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-        
-            padding: 15px 20px;
-        }
-        
-        .sidebar a:hover {
-            background-color: #444;
-        }
         
         .content {
             margin-left: 220px;
@@ -94,50 +69,79 @@
             color: #4da6ff;
         }
 
-        /* container */
-        .menu-container {
-            position: relative;
-        }
-        
-        /* hamburger icon */
-        .menu-icon {
-            font-size: 50px;
-            cursor: pointer;
+        /* --- NAVIGATION LOGIC --- */
+
+        .nav-area {
             position: fixed;
-            top: 15px;
-            left: 20px;
+            top: 0;
+            left: 0;
+            /* 1. Make the trigger area small - just around the icon */
+            width: 70px;
+            height: 70px;
             z-index: 1000;
+            /* background-color: rgba(255,0,0,0.2); */ /* Uncomment this to see the trigger box */
         }
-        
-        /* sidebar hidden by default */
+
+        /* 2. Expand the area ONLY when hovered so the sidebar stays open */
+        .nav-area:hover {
+            width: 200px;
+            height: 100vh;
+        }
+
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        /* Drawing the hamburger bars */
+        .menu-icon div {
+            width: 35px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            border-radius: 2px;
+        }
+
         .sidebar {
             position: fixed;
             top: 0;
-            left: -200px; /* hidden off-screen */
+            left: -200px; 
             width: 180px;
             height: 100vh;
             background-color: #222;
             padding-top: 60px;
-        
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
+            z-index: 999;
         }
-        
-        /* links */
+
         .sidebar a {
             display: block;
             color: white;
             text-decoration: none;
             padding: 15px;
+            font-size: 18px;
         }
-        
+
         .sidebar a:hover {
             background-color: #444;
         }
-        
-        /* SHOW sidebar when hovering menu area */
-        .menu-container:hover .sidebar {
-            left: 0;
+
+        /* --- THE HOVER ACTIONS --- */
+
+        /* When hovering the small corner area: */
+        .nav-area:hover .sidebar {
+            left: 0; /* Slide sidebar in */
         }
+
+        .nav-area:hover .menu-icon {
+            opacity: 0; /* Hide hamburger */
+            pointer-events: none;
+        }
+
+        /* --- INSTAGRAM --- */
 
         #instagram {
             text-align: center;
@@ -173,22 +177,24 @@
 </head>
 
 <body>
-
-<div class="menu-container">
     
-    <!-- hamburger icon -->
-    <div class="menu-icon">☰</div>
-
-    <!-- sidebar -->
-    <div class="sidebar">
-        <a href="home.html">Home</a>
-        <a href="contact.html">Contact</a>
-        <a href="events.html">Events</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="mathematics.html">Mathematics</a>
+    <div class="nav-area">
+        <!-- The Hamburger Symbol -->
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    
+        <!-- The Sidebar -->
+        <div class="sidebar">
+            <a href="home.html">Home</a>
+            <a href="contact.html">Contact</a>
+             <a href="events.html">Events</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="mathematics.html">Mathematics</a>
+        </div>
     </div>
-    
-</div>
     
 <div class="container">
     <div class="profile">
