@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abhijit A J | Mathematics</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Container for the page content */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 40px; /* Top padding to clear the nav icon */
+        }
+
+        /* HEADER SECTION: Contact on left, Image on right */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info h1 {
+            font-size: 36px;
+            margin: 0 0 10px 0;
+            color: white;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 22px;
+        }
+
+        .header-pic {
+            width: 200px;   /* Smaller size for header */
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        /* CONTENT STYLING */
+        h2 {
+            font-size: 36px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: left; /* Explicitly left aligned */
+            border-left: 4px solid #4da6ff;
+            padding-left: 15px;
+        }
+
+        .content-block {
+            text-align: left;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .content-block p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #4da6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- NAVIGATION LOGIC (Kept from original) --- */
+
+        .nav-area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 70px;
+            z-index: 1000;
+        }
+
+        .nav-area:hover {
+            width: 200px;
+            height: 100vh;
+        }
+
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .menu-icon div {
+            width: 35px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            border-radius: 2px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -200px; 
+            width: 180px;
+            height: 100vh;
+            background-color: #222;
+            padding-top: 60px;
+            transition: 0.3s ease-in-out;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        .nav-area:hover .sidebar {
+            left: 0;
+        }
+
+        .nav-area:hover .menu-icon {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Responsive adjustment for small screens */
+        @media (max-width: 600px) {
+            .header-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .contact-info {
+                margin-top: 20px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="nav-area">
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    
+        <div class="sidebar">
+            <a href="home.html">Home</a>
+            <a href="miscellaneous.html">Miscellaneous</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- New Header Section -->
+        <div class="header-section">
+            <div class="contact-info">
+                <h1>Contact details:</h1>
+                <p>Full name: <b>Abhijit Aryampilly Jayanthan</b> <small style="color: #888;">(he/him)</small><br></p>
+                <p>Email: <a href="mailto:abhiaj@math.uni-paderborn.de"><b>abhiaj@math.uni-paderborn.de</b></a></p>
+                <p>Office number: <b>J2.305</b><br></p>
+                <p>Office address: <b>Warburger Str. 100, 33098 Paderborn</b><br></p>
+                <p>Office telephone number: <b>+49 5251 60-4606</b></p>
+                <p>Curriculum Vitae: <b><a href="CurriculumVitae.pdf">Link</a></b> (Last update: June, 2026)</p>
+                
+            </div>
+            <!-- Replace 'your-photo.jpg' with your actual image path -->
+            <img src="photo.jpg" alt="Abhijit A J" class="header-pic">
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-block">
+            <h2>My mathematical works:</h2>
+            <p>
+                <strong>Bachelor Thesis:</strong> <a href="BachelorThesis.pdf">Sheaf Cohomology and Serre Duality</a> <br>
+                (Supervised by <a href="https://www.cmi.ac.in/~krishna/">Prof. Krishna Hanumanthu</a>)
+            </p>
+            <p>
+                <strong>Master Thesis:</strong> <a href="MasterThesis.pdf">Vector bundles on pro-finite-étale covers of elliptic curves</a> <br>
+                (Supervised by <a href="https://bheuer.github.io/">Prof. Dr. Ben Heuer</a>)
+            </p>
+            <p>
+                <strong>Number of non-primes in the set of units modulo n</strong> (<a href="https://arxiv.org/abs/1907.09908">arxiv</a>) <br>
+                with <a href="https://satya8118.github.io/">A. Satyanarayana Reddy</a>
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h2>Courses taught:</h2>
+            <p>
+                Summer Semester 2024 : <b>Einführung in mathematisches Denken und Arbeiten</b><br>
+                (Assistant to <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/team/prof-dr-f-januszewski">Prof. Dr. Fabian Januszewski</a>)
+            </p>
+
+            <p>
+                Winter Semester 2024/2025: <b>Einführung in mathematisches Denken und Arbeiten</b><br>
+                (Assistant to <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/team/prof-dr-f-januszewski">Prof. Dr. Fabian Januszewski</a>)
+            </p>
+
+            <p>
+                Summer Semester 2025 : <b>Lineare Algebra 2</b><br>
+                (Assistant to <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/team/prof-dr-f-januszewski">Prof. Dr. Fabian Januszewski</a>)
+            </p>
+
+            <p>
+                Winter Semester 2025/2026 : <b>Lineare Algebra 2</b><br>
+                (Assistant to <a href="https://math.uni-paderborn.de/anca-popa">Dr. Anca Popa</a>)
+            </p>
+
+            <p>
+                Summer Semster 2026 : <b>Geometrie für Lehramtsstudierende</b><br>
+                (Assistant to <a href="https://bdelarue.de/">Dr. Benjamin Delarue</a>)
+            </p>
+            
+        </div>
+
+        <div class="content-block">
+            <h2>Events organised:</h2>
+            <p>
+                <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/kleine-ag#c923117">Klei­ne AG - Ca­no­ni­cal mo­dels of Shi­mu­ra va­ri­e­ties</a><br>
+                (29th March, 2025)
+            </p>
+
+            <p>
+                <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie/entr25">Early Number Theory Researchers Workshop 2025</a><br>
+                (27th to 29th August, 2025)
+            </p>
+            
+        </div>
+        
+        <div class="content-block">
+            <h2>Other links:</h2>
+            <p>
+                Here is a link to my Github account: <a href="https://github.com/abhijitaj1997">Link</a>.<br>
+                <small style="color: #888;">(Note: Nearly all my repositories are currently private)</small><br>
+            </p>
+
+            <p>
+                To view the webpage of my working group <a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra-und-zahlentheorie">click here</a>.
+            </p>
+            
+            <p>
+                My favourite mathematics-related webpage is <a href="https://cemulate.github.io/the-mlab/">mlab</a>. If you do not know what it is, I suggest you have a look!
+            
+            
+        </div>
+    </div>
+    
+</body>
+</html>
