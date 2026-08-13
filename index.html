@@ -128,6 +128,14 @@
             background-color: #444;
         }
 
+        .sidebar .menu-label {
+            display: block;       /* Makes it take up a full line like the links */
+            color: grey;          /* Sets the color to grey */
+            padding: 15px;        /* Matches the padding of your existing links */
+            font-size: 18px;      /* Matches the font size of your existing links */
+            cursor: default;      /* Prevents the 'hand' cursor from appearing */
+        }
+        
         /* --- THE HOVER ACTIONS --- */
 
         /* When hovering the small corner area: */
@@ -155,6 +163,7 @@
     
         <!-- The Sidebar -->
         <div class="sidebar">
+            <span class="menu-label">Home</span> 
             <a href="mathematics.html">Mathematics</a>
             <a href="miscellaneous.html">Miscellaneous</a>
         </div>
