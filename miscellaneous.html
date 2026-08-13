@@ -132,7 +132,15 @@
         .sidebar a:hover {
             background-color: #444;
         }
-
+        
+        .sidebar .menu-label {
+            display: block;       /* Makes it take up a full line like the links */
+            color: grey;          /* Sets the color to grey */
+            padding: 15px;        /* Matches the padding of your existing links */
+            font-size: 18px;      /* Matches the font size of your existing links */
+            cursor: default;      /* Prevents the 'hand' cursor from appearing */
+        }
+        
         /* --- THE HOVER ACTIONS --- */
 
         /* When hovering the small corner area: */
@@ -194,6 +202,7 @@
         <div class="sidebar">
             <a href="https://abhijitaj1997.github.io/">Home</a>
             <a href="https://abhijitaj1997.github.io/mathematics.html">Mathematics</a>
+            <span class="menu-label">Miscellaneous</span> 
         </div>
     </div>
     
